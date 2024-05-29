@@ -105,26 +105,84 @@ double add(int x, double y){
 //     return 0;
 // }
 
-#include<iostream>
+
+// question 4
+// #include<iostream>
+
+// using namespace std;
+
+// #define pie 3.14
+
+// float area(float radius);
+
+// int main(){
+//     float rad;
+//     cout << "Please enter the radius of circle who's are you want to compute: " << endl;
+//     cin >> rad;
+
+//     // float ar = area(rad);
+
+//     cout << "Area of given circle is: " << area(rad) << endl;
+
+//     return 0;
+// }
+
+// float area(float r){
+//     return pie * r * r; 
+// }
+
+
+// Question 6
+
+// #include<iostream>
+
+// using namespace std;
+
+// int sum(int num[], int length){
+//     int retVal = 0;
+//     for(int i = 0; i < length; i++){
+//         retVal = retVal + num[i];
+//     }
+//     return retVal;
+// }
+
+// int main(){
+//     int l = 10;
+//     int numArray[l];
+
+//     for(int i = 0; i < l; i++){
+//         cout << "Enter the number for Array: " << endl;
+//         cin >> numArray[i];
+//     }
+
+//     cout << "Sum of the array is: " << sum(numArray, l) << endl;
+//     return 0;
+// }
+
+
+// question 7
+
+#include<iostream> 
+
+#define LENGTH    10
 
 using namespace std;
 
-#define pie 3.14
+void printArray(int array[], int length);
 
-float area(float radius);
+int main(void){
+    int a[LENGTH] = {1, 2, 3, 4, 5, 6, 7, 8, 9, 10};
+    int b[LENGTH] = {100, 200, 300, 400, 500, 600, 700, 800, 900, 1000};
 
-int main(){
-    float rad;
-    cout << "Please enter the radius of circle who's are you want to compute: " << endl;
-    cin >> rad;
+    printArray(a, LENGTH);
+    printArray(b, LENGTH*2);
 
-    // float ar = area(rad);
-
-    cout << "Area of given circle is: " << area(rad) << endl;
-    
-    return 0;
+    return EXIT_SUCCESS;
 }
 
-float area(float r){
-    return pie * r * r; 
+void printArray(int array[], int length){
+    for(int i = 0; i < length; ++i){
+        cout << "array[" << i << "] = " << array[i] << endl;
+    }
+    cout << endl;
 }
